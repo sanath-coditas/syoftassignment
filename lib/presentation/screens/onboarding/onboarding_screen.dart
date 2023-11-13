@@ -58,7 +58,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         Navigator.popUntil(context, (route) => false);
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => const DashboardScreen(),
+                            builder: (context) => DashboardScreen(
+                              personEntity: state.personEntity,
+                            ),
                           ),
                         );
                       }

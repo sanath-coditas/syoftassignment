@@ -11,4 +11,8 @@ class FailureState extends AuthenticationState {
   final String message;
 }
 
-class AuthenticationSuccessfulState extends AuthenticationState {}
+class AuthenticationSuccessfulState extends AuthenticationState {
+  final PersonEntity personEntity;
+  AuthenticationSuccessfulState({required this.personEntity});
+
+}

@@ -61,16 +61,16 @@ class OrderFood extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
-              Center(
-                child: SvgPicture.asset(
-                  AssetConstants.orderSvg,
-                  height: MediaQuery.sizeOf(context).height * 0.38,
-                  width: MediaQuery.sizeOf(context).width * 0.38,
+              Expanded(
+                child: Center(
+                  child: SvgPicture.asset(
+                    AssetConstants.orderSvg,
+                    height: double.infinity,
+                  ),
                 ),
               ),
-              const Spacer(),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
+                padding: const EdgeInsets.symmetric(vertical: 40),
                 child: DotIndicatorWithButton(
                   text: 'Next',
                   pageIndex: 0,

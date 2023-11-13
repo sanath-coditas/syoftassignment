@@ -60,11 +60,12 @@ class CookSafeFood extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
-              Center(
-                child: SvgPicture.asset(
-                  AssetConstants.cookingSvg,
-                  height: MediaQuery.sizeOf(context).height * 0.38,
-                  width: MediaQuery.sizeOf(context).width * 0.38,
+              Expanded(
+                child: Center(
+                  child: SvgPicture.asset(
+                    AssetConstants.cookingSvg,
+                    height: double.infinity,
+                  ),
                 ),
               ),
               const SizedBox(
@@ -81,9 +82,8 @@ class CookSafeFood extends StatelessWidget {
                 'We maintain safety and we keep clean while cooking food.',
                 style: TextStyleConstants.s15WNcBlack40,
               ),
-              const Spacer(),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
+                padding: const EdgeInsets.symmetric(vertical: 40),
                 child: DotIndicatorWithButton(
                   text: 'Next',
                   pageIndex: 1,
